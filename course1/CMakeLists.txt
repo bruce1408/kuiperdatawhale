@@ -22,4 +22,5 @@ target_link_libraries(kuiper_datawhale_course1 ${link_lib} ${link_math_lib} Open
 target_include_directories(kuiper_datawhale_course1 PUBLIC ${glog_INCLUDE_DIR})
 target_include_directories(kuiper_datawhale_course1 PUBLIC ${GTest_INCLUDE_DIR})
 target_include_directories(kuiper_datawhale_course1 PUBLIC ${Armadillo_INCLUDE_DIR})
+
 enable_testing()
