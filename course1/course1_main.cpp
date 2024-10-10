@@ -6,11 +6,20 @@
 #include <glog/logging.h>
 
 int main(int argc, char *argv[]) {
-  testing::InitGoogleTest(&argc, argv);
-  google::InitGoogleLogging("Kuiper");
-  FLAGS_log_dir = "../../course1/log";
-  FLAGS_alsologtostderr = true;
+  
+    testing::InitGoogleTest(&argc, argv);
 
-  LOG(INFO) << "Start test...\n";
-  return RUN_ALL_TESTS();
+    google::InitGoogleLogging("Kuiper");
+
+    FLAGS_log_dir = "../../course1/log";
+
+    FLAGS_alsologtostderr = true;
+
+    LOG(INFO) << "Start test...\n";
+
+    int ret = RUN_ALL_TESTS();
+
+    google::ShutdownGoogleLogging();
+
+    return ret;
 }
